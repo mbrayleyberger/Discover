@@ -1,0 +1,114 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building on master in workspace C:\java\jenkins\jobs\Build Fedex project 2\workspace
+Cloning the remote Git repository
+Cloning repository https://github.com/jwcrawford2/fedex-demo
+ > git.exe init C:\java\jenkins\jobs\Build Fedex project 2\workspace # timeout=10
+Fetching upstream changes from https://github.com/jwcrawford2/fedex-demo
+ > git.exe --version # timeout=10
+using .gitcredentials to set credentials
+ > git.exe config --local credential.helper store --file=\"C:\Windows\TEMP\git8899530921599897552.credentials\" # timeout=10
+ > git.exe fetch --tags --progress https://github.com/jwcrawford2/fedex-demo +refs/heads/*:refs/remotes/origin/*
+ > git.exe config --local --remove-section credential # timeout=10
+ > git.exe config remote.origin.url https://github.com/jwcrawford2/fedex-demo # timeout=10
+ > git.exe config remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/jwcrawford2/fedex-demo # timeout=10
+Fetching upstream changes from https://github.com/jwcrawford2/fedex-demo
+using .gitcredentials to set credentials
+ > git.exe config --local credential.helper store --file=\"C:\Windows\TEMP\git4126199410177582846.credentials\" # timeout=10
+ > git.exe fetch --tags --progress https://github.com/jwcrawford2/fedex-demo +refs/heads/*:refs/remotes/origin/*
+ > git.exe config --local --remove-section credential # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 9477d9974466cb18fb82d87668e96bf975f582e6 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 9477d9974466cb18fb82d87668e96bf975f582e6
+First time build. Skipping changelog.
+[workspace] $ C:\java\jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven3\bin\mvn.bat clean cobertura:cobertura
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building fedex-demo 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ fedex-demo ---
+[INFO] Deleting C:\java\jenkins\jobs\Build Fedex project 2\workspace\target
+[INFO] 
+[INFO] >>> cobertura-maven-plugin:2.5.1:cobertura (default-cli) @ fedex-demo >>>
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- axistools-maven-plugin:1.4:wsdl2java (default) @ fedex-demo ---
+[INFO] about to add compile source root
+[INFO] Processing wsdl: C:\java\jenkins\jobs\Build Fedex project 2\workspace\src\main\wsdl\ShipService_v9.wsdl
+Sep 26, 2014 6:13:47 AM org.apache.axis.utils.JavaUtils isAttachmentSupported
+WARNING: Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ fedex-demo ---
+[debug] execute contextualize
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\java\jenkins\jobs\Build Fedex project 2\workspace\src\main\resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ fedex-demo ---
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 251 source files to C:\java\jenkins\jobs\Build Fedex project 2\workspace\target\classes
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- cobertura-maven-plugin:2.5.1:instrument (default-cli) @ fedex-demo ---
+[INFO] Cobertura 1.9.4.1 - GNU GPL License (NO WARRANTY) - See COPYRIGHT file
+Instrumenting 1 file to C:\java\jenkins\jobs\Build Fedex project 2\workspace\target\generated-classes\cobertura
+Cobertura: Saved information on 1 classes.
+Instrument time: 132ms
+
+[INFO] Instrumentation was successful.
+[INFO] NOT adding cobertura ser file to attached artifacts list.
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ fedex-demo ---
+[debug] execute contextualize
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\java\jenkins\jobs\Build Fedex project 2\workspace\src\test\resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ fedex-demo ---
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to C:\java\jenkins\jobs\Build Fedex project 2\workspace\target\test-classes
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ fedex-demo ---
+[INFO] Surefire report directory: C:\java\jenkins\jobs\Build Fedex project 2\workspace\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.hp.demo.fedex.ShipWebServiceClientTest
+Sep 26, 2014 6:14:03 AM org.apache.axis.utils.JavaUtils isAttachmentSupported
+WARNING: Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.375 sec
+Flushing results...
+Flushing results done
+Cobertura: Loaded information on 1 classes.
+Cobertura: Saved information on 1 classes.
+
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] <<< cobertura-maven-plugin:2.5.1:cobertura (default-cli) @ fedex-demo <<<
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- cobertura-maven-plugin:2.5.1:cobertura (default-cli) @ fedex-demo ---
+[INFO] Cobertura 1.9.4.1 - GNU GPL License (NO WARRANTY) - See COPYRIGHT file
+Cobertura: Loaded information on 1 classes.
+Report time: 325ms
+
+[INFO] Cobertura Report generation was successful.
+[INFO] Cobertura 1.9.4.1 - GNU GPL License (NO WARRANTY) - See COPYRIGHT file
+Cobertura: Loaded information on 1 classes.
+Report time: 208ms
+
+[INFO] Cobertura Report generation was successful.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 18.466s
+[INFO] Finished at: Fri Sep 26 06:14:04 CDT 2014
+[INFO] Final Memory: 26M/297M
+[INFO] ------------------------------------------------------------------------
+[Cobertura] Publishing Cobertura coverage report...
+Publishing Cobertura coverage results...
+Cobertura coverage report found.
+Finished: SUCCESS

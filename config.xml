@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.5">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/jwcrawford2/fedex-demo</url>
+        <credentialsId>2bf20861-5c8d-4613-beb6-f1454f7e8582</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Maven>
+      <targets>clean
+cobertura:cobertura</targets>
+      <mavenName>Maven3</mavenName>
+      <usePrivateRepository>false</usePrivateRepository>
+      <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+      <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+    </hudson.tasks.Maven>
+  </builders>
+  <publishers>
+    <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.9.2">
+      <coberturaReportFile>**/target/site/cobertura/coverage.xml</coberturaReportFile>
+      <onlyStable>false</onlyStable>
+      <failUnhealthy>false</failUnhealthy>
+      <failUnstable>false</failUnstable>
+      <autoUpdateHealth>false</autoUpdateHealth>
+      <autoUpdateStability>false</autoUpdateStability>
+      <zoomCoverageChart>false</zoomCoverageChart>
+      <maxNumberOfBuilds>0</maxNumberOfBuilds>
+      <failNoReports>true</failNoReports>
+      <healthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>7000000</int>
+          </entry>
+        </targets>
+      </healthyTarget>
+      <unhealthyTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </unhealthyTarget>
+      <failingTarget>
+        <targets class="enum-map" enum-type="hudson.plugins.cobertura.targets.CoverageMetric">
+          <entry>
+            <hudson.plugins.cobertura.targets.CoverageMetric>CONDITIONAL</hudson.plugins.cobertura.targets.CoverageMetric>
+            <int>0</int>
+          </entry>
+        </targets>
+      </failingTarget>
+      <sourceEncoding>ASCII</sourceEncoding>
+    </hudson.plugins.cobertura.CoberturaPublisher>
+    <com.hp.alm.ali.hudson.BuildRecorder plugin="ali-hudson-plugin@2.7.0.145580">
+      <testSourceMapping>(.*)/bin/Debug/ShipWebServiceClientTest\.dll/.*/([^/]*$)//$1/$2//cs</testSourceMapping>
+      <almLocation>http://alm-server:8080/qcbin</almLocation>
+      <almDomain>DEFAULT</almDomain>
+      <almProject>ALM12_ALI_DEMO</almProject>
+      <almUsername>alex_alm</almUsername>
+      <almPassword>SFAkJEFMTWRlbTBz</almPassword>
+      <almBuildServer>Jenkins</almBuildServer>
+      <settings>
+        <entry>
+          <string>salesforce_config</string>
+          <com.hp.alm.ali.hudson.coverage.salesforce.AliSalesforceCoverageExtension_-SalesforceConfig>
+            <reportDir></reportDir>
+            <projectRoot>src</projectRoot>
+          </com.hp.alm.ali.hudson.coverage.salesforce.AliSalesforceCoverageExtension_-SalesforceConfig>
+        </entry>
+        <entry>
+          <string>ncover_config</string>
+          <string></string>
+        </entry>
+      </settings>
+    </com.hp.alm.ali.hudson.BuildRecorder>
+    <com.hp.alm.ali.hudson.DelayedUpstreamPush plugin="ali-hudson-plugin@2.7.0.145580"/>
+  </publishers>
+  <buildWrappers/>
+</project>
