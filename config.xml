@@ -8,8 +8,8 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/jwcrawford2/fedex-demo</url>
-        <credentialsId>2bf20861-5c8d-4613-beb6-f1454f7e8582</credentialsId>
+        <url>https://github.com/mbrayleyberger/fedex</url>
+        <credentialsId></credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
