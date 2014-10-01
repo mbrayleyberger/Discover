@@ -26,7 +26,7 @@ import java.util.Calendar;
 // fifth change
 // onew more
 //Sample code to call the FedEx Ship Service - Domestic Express
-// added code
+// added code2
 
 public class ShipWebServiceClient 
 {
